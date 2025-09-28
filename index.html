@@ -5,12 +5,16 @@
     <title>Welcome!</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
+<style>
+
+</style>
 <body>
     <div id="Headimg" style="background-color: blue;background-image: none;width: 128px;height: 128px;left: 32px;top: 30px;position: absolute;z-index: 9;">
         <img src="head.jpg" alt="Head Image" style="width: 100%; height: 100%;" />
     </div>
     <div id="WelcomeText" style="position: absolute; left: 180px; top: 50px; font-size: 24px; color: black;">
         Welcome to My Website!</div>
+    <div id="search-tips" style="position: absolute;background-color: rgb(255, 255, 255);width: 100%;height: 32px; left: 180px; top: 101px; font-size: 14px; color: gray;"></div>
     <div id="buttonplane" style="width: 128px;height: 512px;left: 32px;top: 188px;background-color:rgb(101, 225, 13);position: absolute;z-index: 8;">
         <button style="width: 80%;height: 26px;">clickme  ></button>
         <button style="width: 80%;height: 26px;">clickme  ></button>
@@ -41,11 +45,28 @@
         </li>
     </div>
     <div id="lank" style="width: 128px;height: 1024px;left:5px;top: 5px;background-color: gold;position: absolute;z-index: -9;"></div>
-    <div id="mainplane" style="width: 512px;height: 512px;left: 180px;top: 188px;background-color: rgb(218, 191, 191);position: absolute;z-index: 1;">
-        
+    <div id="mainplane" style="width: 67%;height:821px;left: 180px;top: 188px;background-color: rgb(218, 191, 191);position: absolute;z-index: -2;">
+        <article style="padding: 20px;">
+            <h1>Main Content Area</h1>
+            <p>This is where the main content of the website will go.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur.</p>
+            <p>More content can be added here as needed.</p>
+        </article>
     </div>
+    <div id="search" style="width: 512px;height: 30px;left: 180px;top: 12px;background-color: rgb(218, 191, 191);position: absolute;z-index: 1;">
+        <input id="search-input" type="text" placeholder="Search..." style="width: 87%;height: 100%;padding: 5px;box-sizing: border-box;" />
+        <button id="search-button" style="height: 100%;padding: 5px;right: 0px;width: 12%;">Search</button>
+    </div>
+    <div id="footer" style="width: 100%;height: 13%;left:0px;top: 1029px;background-color: #303030;position: absolute;z-index: -1;"></div>
 </body>
 <script>
-    
+    document.getElementById("search-button").addEventListener("click", function() {
+        var query = document.getElementById("search-input").value;
+        if (query) {
+            document.getElementById("search-tips").style.backgroundColor = "lightyellow";
+            document.getElementById("search-tips").innerHTML += "<p style='top: 0px;'>搜索内容：" + query + "</p>";
+        }
+
+    });
 </script>
 </html>
