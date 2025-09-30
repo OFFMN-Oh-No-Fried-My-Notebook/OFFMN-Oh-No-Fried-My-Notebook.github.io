@@ -1,0 +1,21 @@
+body {
+    background: #fff;
+}
+
+.button-metro {
+    background: #FFD600;
+    color: #000;
+    border: none;
+    border-radius: 0;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+
+.button-metro:hover,
+.button-metro:focus {
+    background: #FFEA00;
+}

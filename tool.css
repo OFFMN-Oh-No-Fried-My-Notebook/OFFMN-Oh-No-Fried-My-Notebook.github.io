@@ -1,0 +1,31 @@
+/* Metro UI Blue Background */
+body {
+    background: #0078d7;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Metro UI Button Style */
+.button, button, input[type="button"], input[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background: #005fa3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.button:active, button:active, input[type="button"]:active, input[type="submit"]:active {
+    background: #004377;
+}
